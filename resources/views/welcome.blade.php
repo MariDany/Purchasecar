@@ -81,8 +81,10 @@
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
+                    <br>
                     @foreach($Users as $User)
                     {{$User}}
+                    <br>
                     @endforeach
                 </div>
 

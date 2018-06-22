@@ -15,10 +15,18 @@ use App\User;
 
 Route::get('/', function () {
     $User = new App\User;
-    $User = $User::all()->first();
-    return view('welcome',['User'=>$User]);
+    $Users = $User::all();
+
+    return view('welcome',['Users'=>$Users]);
 });
 
 Auth::routes();
+Route::get('/sup', function(){
+    $User = new App\User;
+    $Users= $User::all()->first();
+    
+    return $Users->roles;
+
+});
 
 Route::get('/home', 'HomeController@index')->name('home');

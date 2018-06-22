@@ -18,7 +18,7 @@ class User extends Authenticatable
 
     protected $table = 'users';
     protected $fillable = [
-        'name', 'email', 'password',
+        'firstname','lastname', 'email','dni', 'password',
     ];
 
     /**
@@ -45,4 +45,5 @@ class User extends Authenticatable
     public function payments(){
         return $this->hasMany('App\Payment');
     }
+   
 }

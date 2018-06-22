@@ -81,8 +81,8 @@
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
-                    @foreach($User->roles as $roles)
-                    {{$roles->nombre}}
+                    @foreach($Users as $User)
+                    {{$User}}
                     @endforeach
                 </div>
 

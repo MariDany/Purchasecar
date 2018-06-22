@@ -20,6 +20,9 @@ class AddDatabase extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->string('dni');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->rememberToken();
             $table->timestamps();
          });
  
